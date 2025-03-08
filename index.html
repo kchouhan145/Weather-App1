@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+</head>
+<body>
+    <div class="header">
+        <h1>Weather App</h1>
+        <p>Made By Kartik Chouhan</p>
+    </div>
+    <div class="container">
+        <div class="serach">
+            <input type="text" id="search-in" placeholder="Enter city name" autocomplete="off" oninput="showSuggestions(this.value)">
+            <div id="suggestions"></div>
+            <button id="search-btn">
+                <i class='bx bx-search'></i>
+            </button>
+        </div>
+        <div class="data-container" id="dataID">
+            <div class="city-date">
+                <h1 id="city-name">City Name</h1>
+                <p id="date">08 March 2025</p>
+            </div>
+            <div class="temp-info">
+                <p id="description">Sunny</p>
+                <div id="temperature">22°</div>
+            </div>
+            <div class="aditional-info">
+                <div class="card">
+                    <i class='bx bxl-tailwind-css'></i>
+                    <p id="wind">4KM/H</p>
+                    <p>Wind</p>
+                </div>
+                <div class="card">
+                    <i class='bx bxs-droplet' ></i>
+                    <p id="humidity">45 %</p>
+                    <p>humidity</p>
+                </div>
+                <div class="card">
+                    <i class='bx bxs-bullseye'></i>
+                    <p id="visibility">2KM</p>
+                    <p>Visibility</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

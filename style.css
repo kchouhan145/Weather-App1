@@ -1,0 +1,194 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+.header h1{
+    font-size: 5rem;
+}
+.header p
+{
+    justify-self: end;
+}
+.container {
+    /* background: rgba(255, 255, 255, 0.1); */
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    width: 400px;
+}
+.data-container
+{
+    visibility: hidden;
+}
+.serach {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.serach input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 70%;
+}
+
+.serach button {
+    padding: 10px;
+    border: none;
+    background: #0072ff;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+#suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#suggestions li {
+    border-bottom: 1px solid #ddd;
+}
+
+#suggestions li:last-child {
+    border-bottom: none;
+}
+#suggestions {
+    position: absolute;
+    top: 40px;
+    background: #fff;
+    color: #000;
+    width: 100%;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+#suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#suggestions li:hover {
+    background: #f0f0f0;
+}
+
+.city-date h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.city-date p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#temperature
+{
+    font-size:5rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.temp-info {
+    margin-bottom: 20px;
+}
+
+.temp-info .description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.temp-info .temperature {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.aditional-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80px;
+}
+
+.card i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header h1{
+        font-size: 3rem;
+    }
+    .header p
+    {
+        justify-self: end;
+    }
+    .container {
+        width: 90%;
+    }
+
+    .serach input {
+        width: 60%;
+    }
+
+    .card {
+        width: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1{
+        font-size: 2rem;
+    }
+    .header p
+    {
+        justify-self: end;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .serach input {
+        width: 50%;
+    }
+
+    .card {
+        width: 60px;
+    }
+
+    .temp-info .temperature {
+        font-size: 36px;
+    }
+}
