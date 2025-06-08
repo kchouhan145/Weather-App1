@@ -36,7 +36,15 @@ async function showSuggestions() {
 }
 
 async function getWeatherData(city) {
-    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`);
+    const valueS=searchin.value.trim();
+   if(!valueS)
+   {
+
+        swal("Input Required", "Please enter a value to search", "warning");
+   }
+   else
+   {
+     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`);
     let data = await response.json();
     // console.log(data);
     dataContainer.classList.remove('data-container');
@@ -56,8 +64,7 @@ async function getWeatherData(city) {
     humidityInfo.textContent = data.main.humidity+"%";
     let visibilityData = data.visibility;
     visibilityInfo.textContent = visibilityData/1000 + "KM";
-
-
+   }
 }
 
 searchBtn.addEventListener('click', () => {

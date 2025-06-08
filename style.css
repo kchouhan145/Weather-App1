@@ -16,6 +16,9 @@ body {
     height: 100vh;
     gap: 20px;
 }
+.header{
+    padding-top:40px;
+}
 .header h1{
     font-size: 5rem;
 }
@@ -143,6 +146,15 @@ body {
 
 .card p {
     margin: 5px 0;
+}
+footer{
+    padding: 10px;
+    background-color: #000;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Responsive styles */
